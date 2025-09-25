@@ -1,0 +1,1 @@
+/home/ruicaridade/.config/omarchy/current/theme/neovim.lua
