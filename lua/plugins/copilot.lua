@@ -11,6 +11,7 @@ return {
     event = "InsertEnter",
     opts = {
       suggestion = {
+        auto_trigger = true,
         keymap = {
           accept = "<M-l>",
         },
