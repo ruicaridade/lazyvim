@@ -1,3 +1,7 @@
 vim.opt.relativenumber = true
+
+-- Copilot
 vim.g.ai_cmp = false
-vim.g.copilot_nes_debounce = 100
+
+-- Python
+vim.g.lazyvim_python_lsp = "basedpyright"
