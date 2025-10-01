@@ -1,6 +1,12 @@
 return {
   {
     "zbirenbaum/copilot.lua",
+    dependencies = {
+      "copilotlsp-nvim/copilot-lsp",
+      config = function()
+        vim.g.copilot_nes_debounce = 0
+      end,
+    },
     cmd = "Copilot",
     event = "InsertEnter",
     opts = {
@@ -9,22 +15,13 @@ return {
           accept = "<M-l>",
         },
       },
-    },
-  },
-  {
-    "folke/sidekick.nvim",
-    opts = {},
-    keys = {
-      {
-        "<Tab>",
-        function()
-          -- if there is a next edit, jump to it, otherwise apply it if any
-          if not require("sidekick").nes_jump_or_apply() then
-            return "<tab>" -- fallback to normal tab
-          end
-        end,
-        expr = true,
-        desc = "Goto/Apply Next Edit Suggestion",
+      nes = {
+        enabled = true,
+        keymap = {
+          accept_and_goto = "<Tab>",
+          accept = false,
+          dismiss = "<Esc>",
+        },
       },
     },
   },
