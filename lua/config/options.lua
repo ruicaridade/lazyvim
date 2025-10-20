@@ -10,3 +10,6 @@ vim.filetype.add({
     jsonc = "json5",
   },
 })
+
+-- Python
+vim.g.lazyvim_python_lsp = "pyright"
